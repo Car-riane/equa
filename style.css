@@ -1,14 +1,139 @@
-#container {
-  width: 800px;
-  height: 800px;
+body {
   display: flex;
-  justify-self: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Light grey background */
+  font-family: "Inter", sans-serif; /* Use Inter font */
+  margin: 0; /* Remove default body margin */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in element's total width and height */
 }
 
-#display {
-  background-color: gray;
-  color: #0f0;
-  font-size: large;
-  box-shadow: inset;
+/* Container for the calculator */
+.calculator {
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px;
+  background-color: #fff; /* White background for the calculator body */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; /* Take full width of parent (max-width limits it) */
+  max-width: 300px; /* Max width for larger screens */
+  display: flex; /* Use flexbox for main layout */
+  flex-direction: column; /* Stack display and buttons vertically */
 }
+
+/* Styling for the calculator display */
+.calculator-display {
+  background-color: #222; /* Dark background */
+  color: #0f0; /* Green text (like old digital displays) */
+  font-size: 2em; /* Large font size for the main number */
+  padding: 10px 15px; /* Padding inside the display */
+  text-align: right; /* Align text to the right */
+  border-radius: 5px; /* Slightly rounded corners for the display */
+  margin-bottom: 10px; /* Space between display and buttons */
+  min-height: 1.5em; /* Ensure minimum height even when empty */
+  overflow: hidden; /* Hide overflow if numbers get too long */
+  word-wrap: break-word; /* Break long words */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  flex-shrink: 0; /* Prevent display from shrinking */
+}
+
+/* Optional: Style for a smaller previous input line if you add one later */
+.previous-input {
+    font-size: 0.5em; /* Smaller font */
+    color: #aaa; /* Lighter color */
+    min-height: 1em;
+}
+
+/* Optional: Style for the current input line */
+.current-input {
+      font-size: 1em; /* Main font size */
+      color: #0f0; /* Main text color */
+}
+
+/* Container for all button rows */
+.buttons-container {
+    display: flex;
+    flex-direction: column; /* Stack the rows vertically */
+    gap: 8px; /* Space between button rows */
+}
+
+/* Container for each row of buttons using Flexbox */
+.button-row {
+    display: flex; /* Arrange items (buttons) in a row */
+    gap: 8px; /* Space between buttons within a row */
+}
+
+/* Styling for all buttons */
+.button-row button {
+    padding: 15px; /* Padding inside buttons */
+    font-size: 1.2em; /* Button text size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    background-color: #e0e0e0; /* Light grey background for buttons */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+    font-family: "Inter", sans-serif; /* Use Inter font */
+    flex-grow: 1; /* Allow buttons to grow and fill space */
+    flex-basis: 0; /* Start with a base size of 0 */
+}
+
+/* Hover effect for buttons */
+.button-row button:hover {
+    background-color: #d5d5d5; /* Slightly darker on hover */
+}
+
+/* Active effect (when button is pressed) */
+  .button-row button:active {
+    background-color: #ccc; /* Even darker when pressed */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow when pressed */
+  }
+
+/* Specific style for number buttons if needed (optional) */
+.number-button {
+    /* No specific style needed yet, but you could add one */
+}
+
+/* Specific style for operator buttons if needed (optional) */
+.operator-button {
+    background-color: #ff9500; /* Orange background for operators */
+    color: white; /* White text for operators */
+}
+.operator-button:hover {
+  background-color: #e08b00; /* Darker orange on hover */
+}
+.operator-button:active {
+  background-color: #cc8000; /* Even darker when pressed */
+}
+
+/* Style for the equals button (optional) */
+.equals-button {
+  background-color: #007aff; /* Blue background for equals */
+  color: white; /* White text */
+}
+.equals-button:hover {
+  background-color: #006ee0; /* Darker blue on hover */
+}
+.equals-button:active {
+  background-color: #0064cd; /* Even darker when pressed */
+}
+
+/* Style for the clear button (optional) */
+.clear-button {
+  background-color: #d3d3d3; /* Light grey */
+}
+.clear-button:hover {
+  background-color: #c0c0c0;
+}
+.clear-button:active {
+  background-color: #b0b0b0;
+}
+
+/* Special styling for the '0' button to make it wider */
+.button-row .zero-button {
+  flex-grow: 2; /* Make it grow twice as much as others */
+  /* Alternatively, you could use a fixed width or percentage */
+  /* width: calc(50% - 4px); */ /* Example: roughly two columns minus gap */
+}
+

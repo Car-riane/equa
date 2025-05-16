@@ -3,28 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <script src="calc.js" defer></script>
   <title>Equa</title>
 </head>
 <body>
-  <div id="container">
-    <div id="display">19293848</div>
-    <button>AC</button>
-    <button>/</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>x</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>-</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>+</button>
-    <button>=</button>
+  <div class="calculator">
+    <div class="calculator-display" id="display">
+      <div class="previous-input" id="previous-input"></div>
+      <div class="current-input" id="current-input">0</div>
+    </div>
+    <div class="buttons-container">
+      <div class="button-row">
+        <button class="clear-button">AC</button>
+        <button class="operator-button">+/-</button>
+        <button class="operator-button">%</button>
+        <button class="operator-button">/</button>
+      </div>
 
-  </div></div>
+      <div class="button-row">
+        <button class="number-button">7</button>
+        <button class="number-button">8</button>
+        <button class="number-button">9</button>
+        <button class="operator-button">*</button>
+      </div>
+
+      <div class="button-row">
+        <button class="number-button">4</button>
+        <button class="number-button">5</button>
+        <button class="number-button">6</button>
+        <button class="operator-button">-</button>
+      </div>
+
+      <div class="button-row">
+        <button class="number-button">1</button>
+        <button class="number-button">2</button>
+        <button class="number-button">3</button>
+        <button class="operator-button">+</button>
+      </div>
+
+      <div class="button-row">
+        <button class="number-button zero-button">0</button>
+        <button class="number-button">.</button>
+        <button class="equals-button">=</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
