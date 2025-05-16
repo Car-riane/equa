@@ -1,0 +1,14 @@
+#container {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-self: center;
+  flex-wrap: wrap;
+}
+
+#display {
+  background-color: gray;
+  color: #0f0;
+  font-size: large;
+  box-shadow: inset;
+}
