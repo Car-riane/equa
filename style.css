@@ -15,7 +15,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px; /* Rounded corners */
   padding: 10px;
-  background-color: #fff; /* White background for the calculator body */
+  background-color: pink; /* White background for the calculator body */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   width: 100%; /* Take full width of parent (max-width limits it) */
   max-width: 300px; /* Max width for larger screens */
