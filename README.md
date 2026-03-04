@@ -4,7 +4,7 @@ A clean, minimal calculator built with vanilla HTML, CSS, and JavaScript. No fra
 
 ## Live Demo
 
-> _Add your GitHub Pages or deployment link here_
+> https://car-riane.github.io/equa/
 
 ---
 
